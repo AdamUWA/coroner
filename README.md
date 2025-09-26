@@ -52,7 +52,7 @@ Once conda is up and running you'll need to create the environment for our proje
 
 If you have successfully set up the environment you should now be able to start the application. Again, make sure you are in the main directory of this repo and you have the `coroner_env` conda environment running. Now, simply type `python chat.py` and you should be able to start chatting with one of the documents (it'll take a little while to boot the first time). 
 
-**NB** The documents have a `.jsonl` extension because I have already preloaded the vectorized chunks of each document. This makes the process a little smoother and much faster.
+**NB** The documents have a `.jsonl` extension because I have already pre-vectorized the chunks of each document. This makes the process a little smoother and much faster.
 
 Here is an example interaction:
 
