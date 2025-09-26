@@ -4,6 +4,8 @@
 
 Setting up all the dependencies will take quite a while, so make sure you have the time to sit down and go through everything carefully.
 
+### Ollama
+
 First you'll need to install the ollama model server so that we can locally interact with the various LLMs we'll be using. You can download and install ollama from [here](https://ollama.com/).
 
 We'll be using at least three different LLM models in addition to the embedding model for the vector database so you'll need to pull these models from the ollama catalog to your local machine. Once you have ollama installed and running you can start by installing the embedding model.
