@@ -46,7 +46,7 @@ Once conda is up and running you'll need to create the environment for our proje
 
 ### Start Chatting
 
-If you have successfully set up the environment you should now be able to start the application. Again, make sure you are in the main directory of this repo and you have the `coroner_env` conda environment running. Now, simply type `python chat.py` an you should be able to start chatting with one of the documents (it'll take a little while to boot the first time). Here is an example interaction:
+If you have successfully set up the environment you should now be able to start the application. Again, make sure you are in the main directory of this repo and you have the `coroner_env` conda environment running. Now, simply type `python chat.py` and you should be able to start chatting with one of the documents (it'll take a little while to boot the first time). Here is an example interaction:
 
 ```
 ajh@9000 coroner % conda activate coroner_env
