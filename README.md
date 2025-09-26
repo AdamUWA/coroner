@@ -1,4 +1,4 @@
-# README
+# Coroner Project
 
 ## Setup
 
@@ -10,7 +10,7 @@ We'll be using at least three different LLM models in addition to the embedding 
 
 ### Embedding Model
 
-The embedding model we are using is [mxbai-embed-large](https://ollama.com/library/mxbai-embed-large). To install it you can use the following command (from [this](https://ollama.com/library/mxbai-embed-large) page):
+The embedding model we are using is [mxbai-embed-large](https://ollama.com/library/mxbai-embed-large). To install it you can use the following command:
 
 `ollama pull mxbai-embed-large`
 
@@ -43,3 +43,77 @@ Once conda is up and running you'll need to create the environment for our proje
 `conda env create -f environment.yml`
 
 **NB** You'll need to be in the main directory of this repo for the command to work because that is where the `environment.yml` file is located. See [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) for more details. If you've done everything correctly you should now be able to enter the environment by typing `conda activate coroner_env`.
+
+### Start Chatting
+
+If you have successfully set up the environment you should now be able to start the application. Again, make sure you are in the main directory of this repo and you have the `coroner_env` conda environment running. Now, simply type `python chat.py` an you should be able to start chatting with one of the documents. Here is an example interaction:
+
+```
+ajh@9000 coroner % conda activate coroner_env
+(coroner_env) ajh@9000 coroner % python chat.py
+
+Available LLMs:
+
+  1. phi4-mini
+  2. gemma3
+  3. llama3.2
+
+Enter the number of the LLM you want to use: 2
+
+Available files:
+
+  1. TAULELEI-Jacob-Finding.jsonl
+  2. Rodier-Finding.jsonl
+  3. Blood-results-redacted.jsonl
+  4. Forkin-finding-2014.jsonl
+  5. Baby-H-finding.jsonl
+  6. Nicholls-Diver-finding.jsonl
+
+Enter the number of the file you want to use: 2
+
+Initializing, please wait...
+
+Loading jsondata/Rodier-Finding.jsonl
+
+LLM & vector store ready.
+
+Starting chat.
+
+
+
+--------------------------------------------------------------------------------
+
+
+Ask your question (type q to quit): What is under investigation?
+
+
+Question:
+What is under investigation?
+
+Answer:
+The investigation is into the death of Frank Edward Rodier, which began with a suspicion based on police information and culminated in an inquest. Specifically, the investigation concluded that Frank Rodier died on 25 1975 in the waters of the Indian Ocean off Quobba Station near Red Bluff, Carnarvon, likely due to drowning.
+
+Source 1:
+  * text: "INTRODUCTION\n- 2 In my capacity as the Acting State Coroner, I determined on the basis of information provided by the WA Police in August 2023 that   there was   reasonable cause to suspect that Frank had died and that his death was a reportable death under the Act. I therefore made a direction to the Commissioner of Police; pursuant to s 23(1) of ..."
+  * page: 3
+  * document: data/Rodier-Finding.pdf
+
+Source 2:
+  * text: "INTRODUCTION\n- 3 On 11 October  2023 a report  prepared by Detective Sergeant Ellie Wold from the Homicide Squad Missing Person Team. In the report, Frank was confirmed to be a long term missing person, with his disappearance first reported to police at about 10.25 am on 25 1975. In 2006, a review by police had determined Frank's disappearance fell..."
+  * page: 3
+  * document: data/Rodier-Finding.pdf
+
+Source 3:
+  * text: "RECORD OF INVESTIGATION INTO DEATH\nI, Sarah Helen Linton; Deputy State Coroner , having investigated the death of Frank Edward RODIER with an inquest  held at Perth Coroners Court; Central Law Courts, Court 85, 501 Street; Perth, on 14 August 2024, find that the identity of the deceased person was Frank Edward RODIER and that death occurred on 25 1..."
+  * page: 2
+  * document: data/Rodier-Finding.pdf
+
+
+--------------------------------------------------------------------------------
+
+
+Ask your question (type q to quit): q
+
+
+(coroner_env) ajh@9000 coroner %
+```
