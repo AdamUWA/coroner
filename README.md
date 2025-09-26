@@ -18,7 +18,7 @@ Once it's installed use the `ollama list` command. You should see some details a
 
 ### LLM Llama 3.2
 
-All the models we'll be using can be found [here](https://github.com/ollama/ollama/blob/main/README.md#model-library). Take note of the size of the models and the RAM requirements. The first one you'll need to install is [llama3.2](https://ollama.com/library/llama3.2) (2.0 GB) which can be installed with the following command:
+All the LLM models we'll be using can be found [here](https://github.com/ollama/ollama/blob/main/README.md#model-library). Take note of the size of the models and the RAM requirements. The first one you'll need to install is [llama3.2](https://ollama.com/library/llama3.2) (2.0 GB) which can be installed with the following command:
 
 `ollama pull llama3.2`
 
