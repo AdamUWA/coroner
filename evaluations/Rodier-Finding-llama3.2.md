@@ -1,6 +1,10 @@
-# Question 1: Was the cause of death established?
+# Question 1
 
-## Correct Answer: No the direct cause could not be determined.
+Was the cause of death established?
+
+## Correct Answer
+
+No the direct cause could not be determined. Rodier may have died from drowning or from injury.
 
 ## LLM Answer
 
