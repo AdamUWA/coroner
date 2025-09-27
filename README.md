@@ -2,7 +2,7 @@
 
 ## Setup
 
-Setting up all the dependencies will take quite a while, so make sure you have the time to sit down and go through everything carefully.
+Setting up all the dependencies is somewhat complicated and will take quite a while, so make sure you have the time to sit down and go through everything carefully.
 
 ### Ollama
 
