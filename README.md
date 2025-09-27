@@ -2,7 +2,7 @@
 
 ## Setup
 
-Setting up all the dependencies is somewhat complicated and will take quite a while, so make sure you have the time to sit down and go through everything carefully.
+Setting up all the dependencies and the environment is somewhat complex and will take quite a while, so make sure you have the time to sit down and go through everything carefully. This is unavoidable because of the nature of our project, i.e., the main requirement is that everything runs locally.
 
 ### Ollama
 
