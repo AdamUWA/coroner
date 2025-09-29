@@ -125,3 +125,18 @@ Ask your question (type q to quit): q
 
 (coroner_env) ajh@9000 coroner %
 ```
+
+
+## Evaluations
+
+With everything up and running we'll then need to evaluate each of the models on each of the documents so the we'll have an evaluation "report" for each (document, model) pair. For an example of how to do this see `Rodier-Finding-llama3.2.md` in the `evaluations` directory. There you can see that the evaluation scheme is as follows:
+
+- Pose a *question* that we know the correct answer to by examining the oringal document.
+
+- Ask the *question* (i.e., give the question to the chat application).
+
+- Get the *answer*.
+
+- Evaluate the accuracy by giving a score for both the answer and the sources (i.e., LOW, MED, HIGH).
+
+
