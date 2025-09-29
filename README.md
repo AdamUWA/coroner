@@ -137,7 +137,7 @@ With everything up and running we'll then need to evaluate each of the models on
 
 - Get the **answer** (i.e., the output from the chat application).
 
-- Evaluate the **accuracy** by giving a score for both the **answer** and the **sources** (i.e., LOW, MED, HIGH).
+- Evaluate the **correctness** and **relevance** by giving a score for the **answer** and the **sources** respectively (i.e., LOW, MED, HIGH).
 
 We can then collate the results and report them. An example plot might look something like this:
 
