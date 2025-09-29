@@ -139,5 +139,11 @@ With everything up and running we'll then need to evaluate each of the models on
 
 - Evaluate the **accuracy** by giving a score for both the **answer** and the **sources** (i.e., LOW, MED, HIGH).
 
+We can then collate the results and report them. An example plot might look something like this:
+
+![Example Plot](/evaluations/evaluation-example.png)
+
 **NB** It is not possible to have a strictly numerical *scoring* system for this evaluation scheme. That is, the *scores* given are a product of your *human* understanding which is established through careful examination of the original documents.
+
+
 
