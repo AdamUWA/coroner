@@ -33,8 +33,8 @@ Source 3:
   * document: data/Rodier-Finding.pdf
  
 
-## Accuracy
+## Correctness & Relevance
 
-* Answer Accuracy: HIGH
-* Source Accuracy: HIGH
+* Answer Correctness: HIGH
+* Source Relevance: HIGH
 
