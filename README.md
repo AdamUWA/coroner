@@ -129,14 +129,15 @@ Ask your question (type q to quit): q
 
 ## Evaluations
 
-With everything up and running we'll then need to evaluate each of the models on each of the documents so the we'll have an evaluation "report" for each (document, model) pair. For an example of how to do this see `Rodier-Finding-llama3.2.md` in the `evaluations` directory. There you can see that the evaluation scheme is as follows:
+With everything up and running we'll then need to evaluate each of the models on each of the documents so that we'll have an evaluation "report" for each (document, model) pair. For an example of how to do this see `Rodier-Finding-llama3.2.md` in the `evaluations` directory. There you can see that the evaluation scheme is as follows:
 
-- Pose a *question* that we know the correct answer to by examining the oringal document.
+- Pose a **question** that we know the correct answer to by examining the oringal document.
 
-- Ask the *question* (i.e., give the question to the chat application).
+- Ask the **question** (i.e., give the question to the chat application).
 
-- Get the *answer*.
+- Get the **answer** (i.e., the output from the chat application).
 
-- Evaluate the accuracy by giving a score for both the answer and the sources (i.e., LOW, MED, HIGH).
+- Evaluate the **accuracy** by giving a score for both the **answer** and the **sources** (i.e., LOW, MED, HIGH).
 
+**NB** It is not possible to have a strictly numerical *scoring* system for this evaluation scheme. That is, the *scores* given are a product of your *human* understanding which is established through careful examination of the original documents.
 
