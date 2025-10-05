@@ -72,6 +72,16 @@ def pdf_converter(OCR=False):
 
 
 def save_docs_to_jsonl(documents, jsonl_file_path):
+    """
+    Saves a list of documents to a JSONL (JSON Lines) file.
+
+    Args:
+        documents (list): A list of document objects to be saved.
+        jsonl_file_path (str): The file path where the JSONL file will be saved.
+
+    Returns:
+        None
+    """
     with jsonlines.open(jsonl_file_path, mode="w") as writer:
         for doc in documents:
             doc_dump = doc.model_dump()
