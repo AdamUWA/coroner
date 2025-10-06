@@ -18,6 +18,26 @@ from converters import metadata
 
 
 class QandA:
+    """
+    A class for performing question-answering tasks using a language model and a vector database.
+
+    Attributes:
+        gen_model (str): The name of the language model to be used for generating answers.
+        embed_model (str): The name of the embedding model to be used for generating embeddings.
+        vdb (str): The name of the vector database to be used for storing and retrieving documents.
+        file_path (str): The path to the file containing the documents to be used for the question-answering task.
+        top_k (int): The number of top-k most relevant documents to be retrieved for each question.
+        prompt (str): The prompt to be used for the question-answering chain.
+
+    Methods:
+        ask(question, verbose=False):
+            Invokes the question-answering chain to generate an answer to the given question.
+            Args:
+                question (str): The question to be answered.
+                verbose (bool, optional): If True, the method will return the answer and the sources used to generate the answer. Defaults to False.
+            Returns:
+                str or (str, list): The answer to the question, or a tuple containing the answer and the sources used to generate the answer.
+    """
     def __init__(self, gen_model, embed_model, vdb, file_path, top_k, prompt):
         self.gen_model = gen_model
         self.embed_model = embed_model
