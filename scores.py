@@ -60,12 +60,10 @@ if __name__ == '__main__':
     data_frame = calculate_bertscore_df(data_frame)
     
     if file_type == 'csv':
-        #csv_file_path = 'qa-bert-scores.csv'
         csv_file_path = file_stem + '-bert-scores.csv'
         data_frame.to_csv(csv_file_path, index=False)
         print(f'CSV file saved to: {csv_file_path}')
     elif file_type == 'xlsx':
-        #xlsx_file_path = 'qa-bert-scores.xlsx'
         xlsx_file_path = file_stem + '-bert-scores.xlsx'
         data_frame.to_excel(xlsx_file_path, index=False)
         print(f'XLSX file saved to: {xlsx_file_path}')
