@@ -12,7 +12,9 @@ Now you need to rebuild the environment. Enter the top level directory of the **
 
 `conda env create -f environment.yml`
 
-That's it.
+That's it. Now you'll be able to run the webapp like so:
+
+`streamlit run app.py`
 
 ## Setup
 
