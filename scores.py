@@ -31,7 +31,7 @@ def calculate_bertscore_df(df):
     Calculates the BERTScore for each pair of CORRECT_ANSWER and LLM_ANSWER in the input DataFrame.
     
     Args:
-        df (pandas.DataFrame): A DataFrame with columns 'FILENAME', 'MODEL', 'QUESTION', 'CORRECT_ANSWER', and 'LLM_ANSWER'.
+        df (pandas.DataFrame): A DataFrame with required columns 'CORRECT_ANSWER', and 'LLM_ANSWER'.
         
     Returns:
         pandas.DataFrame: A DataFrame with the additional columns 'BERT_PRECISION', 'BERT_RECALL', and 'BERT_F1' containing the BERTScore for each pair.
