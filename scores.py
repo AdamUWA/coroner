@@ -14,7 +14,6 @@ def read_data(file_path):
     Returns:
         pandas.DataFrame: The data from the file as a DataFrame.
     """
-    # Check the file extension to determine the file type
     if file_path.endswith('.csv'):
         df = pd.read_csv(file_path)
         file_type = 'csv'
@@ -60,12 +59,10 @@ if __name__ == '__main__':
     data_frame = calculate_bertscore_df(data_frame)
     
     if file_type == 'csv':
-        # Write the DataFrame to a CSV file
         csv_file_path = 'qa-bert-scores.csv'
         data_frame.to_csv(csv_file_path, index=False)
         print(f'CSV file saved to: {csv_file_path}')
     elif file_type == 'xlsx':
-        # Write the DataFrame to an XLSX file
         xlsx_file_path = 'qa-bert-scores.xlsx'
         data_frame.to_excel(xlsx_file_path, index=False)
         print(f'XLSX file saved to: {xlsx_file_path}')
