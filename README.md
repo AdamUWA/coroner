@@ -1,5 +1,19 @@
 # Coroner Project
 
+## How to Get Latest Version of Repo & Update Conda Environment
+
+First you'll need to remove the current environment with this command:
+
+`conda env remove --name coroner_env`
+
+Next you'll need to download the current version of the repo, i.e., `Download ZIP` from the **code** button.
+
+Now you need to rebuild the environment. Enter the top level directory of the **coroner-main** repo you just downloaded. Now enter the following command:
+
+`conda env create -f environment.yml`
+
+That's it.
+
 ## Setup
 
 Setting up all the dependencies and the environment is somewhat complex and will take quite a while, so make sure you have the time to sit down and go through everything carefully. This is unavoidable because of the nature of our project, i.e., the main requirement is that everything runs locally.
