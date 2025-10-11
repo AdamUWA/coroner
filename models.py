@@ -6,9 +6,16 @@ import pandas as pd
 from langchain_ollama.chat_models import ChatOllama
 
 
-OLLAMA_URL = "http://localhost:11434/"    # TODO: change to func. arg & move to chat.py
+OLLAMA_URL = "http://localhost:11434/"
+
 
 def ollama_status():
+    """
+    Checks the status of the Ollama service by making a GET request to the Ollama server (URL).
+
+    Returns:
+        bool: True if the Ollama service is running and responding with a 200 status code, False otherwise.
+    """
     try:
         response = requests.get(OLLAMA_URL)
         
@@ -21,7 +28,13 @@ def ollama_status():
         return False
 
 
-def get_available_models() -> list:
+def get_available_models():
+    """
+    Retrieves the list of available models from the Ollama service.
+
+    Returns:
+        list: A list of available model names.
+    """
     thelist = requests.get(OLLAMA_URL+"/api/tags")
     jsondata = thelist.json()
     models_available = list()
@@ -33,7 +46,13 @@ def get_available_models() -> list:
     return models_available
 
 
-def get_model_info() -> pd.DataFrame:
+def get_model_info():
+    """
+    Retrieves information about the available models from the Ollama service.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing information about each available model, including the model name, size, and number of parameters.
+    """
     thelist = requests.get(OLLAMA_URL+"/api/tags")
     jsondata = thelist.json()
     results = []

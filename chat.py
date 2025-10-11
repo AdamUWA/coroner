@@ -16,7 +16,8 @@ from langchain_community.document_loaders import JSONLoader
 
 from langchain_docling import DoclingLoader
 from langchain_docling.loader import ExportType
-from langchain_chroma import Chroma
+
+from langchain_core.vectorstores import InMemoryVectorStore
 
 from vecdb import VectorStore
 from models import ollama_status, select_model
@@ -128,10 +129,9 @@ if __name__ == "__main__":
         exit()
 
     GEN_MODEL = select_model()
-    #GEN_MODEL = "llama3.2"
     
     EMBED_MODEL = "mxbai-embed-large"
-    VDB = Chroma
+    VDB = InMemoryVectorStore
     TOP_K = 3
 
     PDF_DATA = Path("./data")
