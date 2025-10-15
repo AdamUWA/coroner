@@ -168,7 +168,7 @@ if __name__ == "__main__":
                                               top_k=TOP_K)
     elif DATA_DIR == PDF_DATA:
 
-        OCR = True if os.path.basename(FILE_PATH) == "Nicholls-Diver finding.pdf" else False
+        OCR = True
         CONVERTER = pdf_converter(OCR=OCR)
 
         EXPORT_TYPE = ExportType.DOC_CHUNKS
