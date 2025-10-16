@@ -123,10 +123,9 @@ If you have a list of pre-prepared questions in, for example, a CSV file, then y
 
 **NB** On some Windows terminals the HTTP requests to the local Ollama server may appear on `stdout`.
 
-To launch the web app type `streamlit run app.py` and you'll see a chat interface like this:
+To launch the web app, in your terminal, type `streamlit run app.py` and you'll see a chat interface like this:
 
-## TODO: ...
-
+![](./webapp-example.png)
 
 ## Preprocessing your Documents
 
