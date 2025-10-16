@@ -74,7 +74,7 @@ If you have successfully set up the environment you should now be able to start 
 
 To start the terminal chat simply type `python chat.py` and you should be able to start chatting with one of the documents (it'll take a little while to boot the first time). 
 
-**NB** The documents have a `.jsonl` extension because I have already pre-vectorized the chunks of each document. This makes the process a little smoother and much faster.
+The documents have a `.jsonl` extension because they have already been through the preprocessor. This makes loading the vector database more efficient.
 
 Here is an example interaction:
 
@@ -119,11 +119,16 @@ Ask your question (type q to quit):
 
 ```
 
+If you have a list of pre-prepared questions in, for example, a CSV file, then you might like to use `chat_extended.py` which has an extension module that, given a file containing a list of questions, automates the question answering for you and saves the results to a file.
+
 **NB** On some Windows terminals the HTTP requests to the local Ollama server may appear on `stdout`.
 
 To launch the web app type `streamlit run app.py` and you'll see a chat interface like this:
 
 ## TODO: ...
+
+
+## Preprocessing your Documents
 
 
 ## Evaluations
