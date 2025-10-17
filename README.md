@@ -127,6 +127,8 @@ To launch the web app, in your terminal, type `streamlit run app.py` and you'll 
 
 ![](./webapp-example.png)
 
+The webapp will _hot reload_ the system for seamless testing of the same question with different generative models and/or different documents.
+
 ## Preprocessing your Documents
 
 If you have a new PDF document you'd like to work with you'll need to preprocess it. To invoke the preprocessor on your document simply add the document to the `data/` directory and then run `python preprocessor.py`. The resulting processed JSONL file will appear in the `/jsondata` directory.
