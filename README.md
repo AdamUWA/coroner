@@ -137,7 +137,7 @@ To use the RAG system from within an ordinary Python script take a look at the d
 
 ## Preprocessing your Documents
 
-If you have a new PDF document you'd like to work with you'll need to preprocess it. To invoke the preprocessor on your document simply add the document to the `data/` directory and then run `python preprocessor.py`. The resulting processed JSONL file will appear in the `/jsondata` directory.
+If you have a new PDF document you'd like to work with you'll need to preprocess it. To invoke the preprocessor on your document simply add the document to the `data/` directory and then run `python preprocessor.py`. The resulting processed JSONL file will appear in the `jsondata/` directory.
 
 
 ## Data
