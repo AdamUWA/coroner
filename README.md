@@ -144,8 +144,12 @@ If you have a new PDF document you'd like to work with you'll need to preprocess
 
 The coroner's reports (and other such documents) used for the project were supplied by Dr. Matt Albrecht from the [Western Australian Centre for Road Safety Research (WACRSR)](https://www.uwa.edu.au/projects/centre-for-road-safety-research/wacrsr-site-link).
 
+
 ## Evaluations
 
+In the `evaluations/` directory you'll find a curated collection of questions and answers along with scores (i.e., scored with [Bert Score](https://arxiv.org/abs/1904.09675)) for each of the documents and generative LLM models.
 
+
+## Report
 
 
