@@ -1,14 +1,14 @@
-Summary of Model Evaluation Results
+# Summary of Model Evaluation Results
 
 This folder contains the detailed results and visualizations from our comparative analysis of three Large Language Models (LLMs) for automated data extraction from coroners' reports. The models tested were Gemma3 , Llama3.2 (8B), and Phi-4 Mini.
 
 To evaluate the models evaluation a sophisticated methodology based on BERT scores (F1, Precision, Recall) was used to measure the semantic similarity between model-generated answers and a manually created "ground truth" dataset.
 
-Key Findings:
+# Key Findings:
 
 Overall Best Performer: The Gemma3 model achieved the highest overall average BERT F1-Score of 0.9092, making it as the most effective and well-balanced model for the general task.
 
-Performance by Task:
+# Performance by Task:
 
 Gemma3 really excelled at direct factual extraction from general coroners' reports, achieving the average F1-Score of 0.9081 on "Easy" questions, 0.9081 on "Medium" questions and 0.9092 on "Hard" questions.
 
