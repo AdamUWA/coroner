@@ -135,4 +135,5 @@ In the `evaluations/` directory you'll find a curated collection of questions an
 
 ## Report
 
+A summary and data files associated with the project report can be found in the `report/` directory.
 
