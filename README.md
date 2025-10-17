@@ -132,6 +132,10 @@ To launch the web app, in your terminal, type `streamlit run app.py` and you'll 
 If you have a new PDF document you'd like to work with you'll need to preprocess it. To invoke the preprocessor on your document simply add the document to the `data/` directory and then run `python preprocessor.py`. The resulting processed JSONL file will appear in the `/jsondata` directory.
 
 
+## Data
+
+The coroner's reports (and other such documents) used for the project were supplied by Dr. Matt Albrecht from the [Western Australian Centre for Road Safety Research (WACRSR)](https://www.uwa.edu.au/projects/centre-for-road-safety-research/wacrsr-site-link).
+
 ## Evaluations
 
 
