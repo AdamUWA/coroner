@@ -3,23 +3,6 @@
 The coroner project is a Retrieval Augmented Generation (RAG) system for interacting with coroner's reports. The idea is to be able to get quick and factually accurate answers to questions about the content of the reports.
 
 
-## How to Get Latest Version of Repo & Update Conda Environment
-
-First you'll need to remove the current environment with this command:
-
-`conda env remove --name coroner_env`
-
-Next you'll need to download the current version of the repo, i.e., `Download ZIP` from the **code** button.
-
-Now you need to rebuild the environment. Enter the top level directory of the **coroner-main** repo you just downloaded. Now enter the following command:
-
-`conda env create -f environment.yml`
-
-That's it. Now you'll be able to run the webapp like so:
-
-`streamlit run app.py`
-
-
 ## Setup
 
 Setting up all the dependencies and the environment is somewhat complex and will take quite a while, so please make sure you have the time to sit down and go through everything carefully.
