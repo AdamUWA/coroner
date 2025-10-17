@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import streamlit as st
 from pathlib import Path
-from bert_score import score
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -12,17 +11,23 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.vectorstores import InMemoryVectorStore
 
 from qanda import QandA
+from models import get_available_models
 
 
-documents = [
-    None,
-    "Baby-H-finding",
-    "Blood-results-redacted",
-    "Forkin-finding-2014",
-    "Nicholls-Diver-finding",
-    "Rodier-Finding",
-    "TAULELEI-Jacob-Finding"
-]
+available_models = get_available_models()
+available_models.remove('mxbai-embed-large')
+available_models = [None] + available_models
+
+DATA_DIR = './jsondata'
+
+if os.path.exists(DATA_DIR):
+    file_names = os.listdir(DATA_DIR)
+else:
+    print("No data. Exiting...") # terminal
+    st.subheader("No data.")     # app
+    exit()
+
+documents = [None] + [os.path.splitext(name)[0] for name in file_names]
 
 
 st.title("Welcome to Coroner App")
@@ -30,22 +35,23 @@ st.title("Welcome to Coroner App")
 st.divider()
 st.button("Refresh", on_click=st.cache_resource.clear())
 
-st.subheader("Choose your document")
+st.subheader("Choose your model")
+chosen_model = st.selectbox("", available_models)
 
+st.subheader("Choose your document")
 chosen_document = st.selectbox("", documents)
 
 
 if chosen_document != None:
 
     FILE_PATH = Path('jsondata/' + chosen_document + '.jsonl')
-    #FILE_PATH = Path("DoesNotExist")
 
     if os.path.exists(FILE_PATH):
         st.write(FILE_PATH)
     else:
         st.write("Error: no data")
 
-    GEN_MODEL = "gemma3"
+    GEN_MODEL = chosen_model
     EMBED_MODEL = "mxbai-embed-large"
     VDB = InMemoryVectorStore
     TOP_K = 3
@@ -77,10 +83,7 @@ if chosen_document != None:
     question = st.text_area("", None)
 
     if question != None:
-        #answer = qanda.ask(str(question))
         answer, sources = qanda.ask(str(question), verbose=True)
         st.write(answer)
         st.write(sources)
-
-
 

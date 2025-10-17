@@ -34,6 +34,24 @@ def initialize_from_pdf(gen_model,
                         export_type,
                         max_tokens, 
                         top_k):
+    """
+    Initialize the language model (LLM) and vector store from a PDF file.
+
+    Parameters:
+
+    gen_model (str): Language model to use for generation.
+    embed_model (str): Embedding model for vectorisation.
+    vdb (str): Vector database.
+    file_path (str): The path to the PDF file to be processed.
+    ocr (bool): Whether to perform optical character recognition (OCR) on the PDF.
+    converter (str): Name of the PDF converter to use.
+    export_type (str): The type of export to perform on the PDF.
+    max_tokens (int): Maximum number of tokens.
+    top_k (int): Top k results to retrieve from the vector store.
+
+    Returns:
+    tuple: A tuple containing the initialized LLM and retriever objects.
+    """
 
     print("\nInitializing, please wait...\n")
 
@@ -67,6 +85,19 @@ def initialize_from_json(gen_model,
                          vdb,
                          file_path,
                          top_k):
+    """
+    Initialize the language model (LLM) and vector store from a JSON file.
+
+    Parameters:
+    gen_model (str): Language model to use for generation.
+    embed_model (str): Embedding model for vectorisation.
+    vdb (str): Vector database.
+    file_path (str): The path to the preprocessed JSON object file.
+    top_k (int): Top k results to retrieve from the vector store.
+
+    Returns:
+    tuple: A tuple containing the initialized LLM and retriever objects.
+    """
 
     print("\nInitializing, please wait...\n")
 
@@ -97,6 +128,19 @@ def initialize_from_json(gen_model,
 
 
 def interactive_chat(llm, retriever, prompt):
+    """
+    Engage in an interactive chat session using the provided generative model (LLM) and vector store retriever.
+
+    The function creates a retrieval-augmented generation (RAG) chain based on the given prompt and then enters a loop to handle user questions.
+
+    Parameters:
+    llm (OllamaLLM): The initialized language model to use for generation.
+    retriever (VectorStoreRetriever): The initialized retriever to use for document retrieval.
+    prompt (str): The prompt used to initialize the question-answer chain.
+
+    Returns:
+    None
+    """
 
     question_answer_chain = create_stuff_documents_chain(llm, prompt)
 
@@ -136,7 +180,6 @@ if __name__ == "__main__":
 
     PDF_DATA = Path("./data")
     JSON_DATA = Path("./jsondata")
-    #JSON_DATA = Path("./DoesNotExist")
 
     if os.path.exists(JSON_DATA):
         DATA_DIR = JSON_DATA
@@ -185,7 +228,6 @@ if __name__ == "__main__":
                                              top_k=TOP_K)
 
     print("Starting chat.\n")
-    #exit()
 
     interactive_chat(llm=LLM, retriever=RETRIEVER, prompt=PROMPT)
 
