@@ -14,14 +14,6 @@ from scores import calculate_bertscore_df
 
 
 # ------------------------------------------------------------------------------ 
-# Explain what a qanda object is
-# ------------------------------------------------------------------------------ 
-
-# A qanda object is a RAG question answer chain encapsulated in a simple 
-# Python object which exposes a single method ask() ... etc etc
-
-
-# ------------------------------------------------------------------------------ 
 # Initialize a QandA object
 # ------------------------------------------------------------------------------ 
 
@@ -58,10 +50,8 @@ help(qanda)
 
 
 # ------------------------------------------------------------------------------ 
-# Several way to use a qanda object
+# Several methods to use a qanda object
 # ------------------------------------------------------------------------------ 
-
-# ...
 
 # ------------------------------------------------------------------------------ 
 # Method 1: Just answer the questions
